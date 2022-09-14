@@ -1,10 +1,24 @@
 .Sidepanel {
-  background-color: #61dafb;
+  background-color: lightsalmon;
   height: 100vh;
-  width: 30%;
+  min-width: fit-content;
+}
+
+.SidepanelContent {
+  margin-inline: 2em;
 }
 
 .ComponentsList {
   list-style: none;
-  margin-left: -130px;
+  padding: 0;
+}
+
+.ComponentListItem {
+  text-align: start;
+  margin: (0 0 8px 4px);
+}
+
+.ListTitle {
+  width: 100%;
+  display: "flex";
 }

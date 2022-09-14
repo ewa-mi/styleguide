@@ -1,11 +1,16 @@
 import "./index.scss";
+import ComponentListItem from "./ComponentListItem";
+import ListTitle from "./ListTitle";
+import { components } from "./../data/sidepanelItems";
 
 export default () => {
+  const renderItems = Object.keys(components).map((item, index) => (
+    <ComponentListItem item={item} key={index} />
+  ));
   return (
-    <ul className="ComponentsList">
-      <li>test 1</li>
-      <li>test 2</li>
-      <li>test 3</li>
-    </ul>
+    <div>
+      <ListTitle title="Components" size="h3" />
+      <ul className="ComponentsList">{renderItems}</ul>
+    </div>
   );
 };

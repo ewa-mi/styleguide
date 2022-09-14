@@ -8,7 +8,6 @@ export default () => {
   return (
     <div className="Sidepanel">
       <div className="SidepanelContent">
-        <p>Components</p>
         <ComponentsList />
       </div>
     </div>
