@@ -4,7 +4,7 @@ import ListTitle from "./ListTitle";
 import { components } from "./../data/sidepanelItems";
 
 export default () => {
-  const renderItems = Object.keys(components).map((item, index) => (
+  const renderItems = components.map((item, index) => (
     <ComponentListItem item={item} key={index} />
   ));
   return (
