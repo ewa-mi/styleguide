@@ -1,9 +1,6 @@
 import "./index.scss";
+import { Component } from "../types";
 
-type Component = {
-  category: string;
-  subcategories?: any; //TODO: Type this
-};
 interface ComponentListItemProps {
   item: Component;
 }

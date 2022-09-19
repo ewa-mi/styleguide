@@ -1,7 +1,7 @@
 import "./index.scss";
 import ComponentListItem from "./ComponentListItem";
 import ListTitle from "./ListTitle";
-import { components } from "./../data/sidepanelItems";
+import { components } from "../data/components";
 
 export default () => {
   const renderItems = components.map((item, index) => (
