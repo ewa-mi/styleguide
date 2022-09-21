@@ -1,4 +1,3 @@
-import React, { ReactNode } from "react";
 import logo from "./logo.svg";
 import "./App.scss";
 import Sidepanel from "./Sidepanel";
@@ -7,7 +6,7 @@ import { components } from "./data/components";
 
 function App() {
   const mappedComponents = components.map((item: Component, index) => {
-    const subItems = item.subcategories?.map((el: Subcategory) => {
+    const subItems = item.subcategories?.map((el: Subcategory, index) => {
       return (
         // TODO: Make a component from this:
         <div key={index}>
@@ -17,14 +16,14 @@ function App() {
       );
     });
     return (
-      <>
+      <div key={index}>
         <h1 id={item.category}>{item.category}</h1>
         <div>{subItems}</div>
         {/* this will be updated later on: */}
         <div style={{ border: "1px solid gray", height: "400px" }}>
           COMPONENTS THEMSELVES WILL GO IN HERE
         </div>
-      </>
+      </div>
     );
   });
 

@@ -26,10 +26,11 @@
 
 .ComponentLink {
   text-decoration: none;
-  // a:hover {
-  //   text-decoration: underline;
-  //   cursor: pointer;
-  // }
+}
+
+.ComponentLinkSelected {
+  background-color: rgb(151, 231, 229);
+  text-decoration: none;
 }
 
 a:visited {

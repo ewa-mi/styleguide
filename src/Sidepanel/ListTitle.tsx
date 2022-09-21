@@ -1,10 +1,11 @@
 import "./index.scss";
 
+//TODO: consider to make more generic component from this, like Header.tsx or Title.tsx
 type ListTitleSize = "h1" | "h2" | "h3" | "h4";
 
 interface ListTitleProps {
   title: string;
-  size?: ListTitleSize | undefined;
+  size: ListTitleSize | undefined;
 }
 
 export default (props: ListTitleProps) => {
