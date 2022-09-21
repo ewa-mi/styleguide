@@ -2,6 +2,10 @@
   text-align: start;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .Head {
   width: 100%;
   display: flex;
@@ -9,7 +13,7 @@
 }
 
 .Main {
-  margin-inline: 90px;
+  margin-inline: 100px;
   margin-block: 20px;
 }
 

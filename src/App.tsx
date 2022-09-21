@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import logo from "./logo.svg";
 import "./App.scss";
-import Sidepanel from "./Sidepanel/index";
+import Sidepanel from "./Sidepanel";
 import { Component, Subcategory } from "./types";
 import { components } from "./data/components";
 
@@ -18,7 +18,7 @@ function App() {
     });
     return (
       <>
-        <h1>{item.category}</h1>
+        <h1 id={item.category}>{item.category}</h1>
         <div>{subItems}</div>
         {/* this will be updated later on: */}
         <div style={{ border: "1px solid gray", height: "400px" }}>

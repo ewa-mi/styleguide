@@ -9,5 +9,11 @@ export default (props: ComponentListItemProps) => {
   const componentCategory =
     item.category.charAt(0).toUpperCase() + item.category.slice(1);
 
-  return <li className="ComponentListItem">{componentCategory}</li>; // TODO: make the font smaller
+  return (
+    <li className="ComponentListItem">
+      <a className="ComponentLink" href={`#${item.category}`}>
+        {componentCategory}
+      </a>
+    </li>
+  ); // TODO: make the font smaller
 };
