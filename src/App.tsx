@@ -12,17 +12,22 @@ function App() {
         <div key={index}>
           <h4>{el.name}</h4>
           <p>{el.intro}</p>
+          <div style={{ border: "1px solid gray", height: "400px" }}>
+            COMPONENTS THEMSELVES WILL GO IN HERE
+          </div>
         </div>
       );
     });
+
     return (
       <div key={index}>
         <h1 id={item.category}>{item.category}</h1>
         <div>{subItems}</div>
-        {/* this will be updated later on: */}
-        <div style={{ border: "1px solid gray", height: "400px" }}>
-          COMPONENTS THEMSELVES WILL GO IN HERE
-        </div>
+        {!item.subcategories?.length && (
+          <div style={{ border: "1px solid gray", height: "400px" }}>
+            COMPONENTS THEMSELVES WILL GO IN HERE
+          </div>
+        )}
       </div>
     );
   });
