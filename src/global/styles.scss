@@ -1,0 +1,37 @@
+// Colors
+$black: rgb(10, 10, 10);
+$white: rgb(250, 250, 250);
+$primary: rgb(23, 189, 164);
+$secondary: rgb(231, 94, 188);
+$error: rgb(230, 10, 10);
+$warning: rgb(255, 123, 0);
+$disabled: rgb(153, 153, 153);
+
+$allBgColors: (
+  "black": $black,
+  "white": $white,
+  "primary": $primary,
+  "secondary": $secondary,
+  "error": $error,
+  "warning": $warning,
+  "disabled": $disabled,
+);
+
+@mixin color-background($name) {
+  @if map-has-key($allBgColors, $name) {
+    $colors: map-get(
+      $map: $allBgColors,
+      $key: $name,
+    );
+
+    background-color: $colors;
+  }
+}
+
+@mixin color-backgrounds() {
+  @each $name in map-keys($allBgColors) {
+    &--bg-#{$name} {
+      @include color-background($name);
+    }
+  }
+}

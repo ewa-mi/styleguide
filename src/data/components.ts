@@ -8,7 +8,7 @@ export const components = [
         //TODO
         name: undefined,
         intro:
-          "The colors can be used for the text, icons and buttons. They have 5 variants: primary, secondary, error, warning and disabled. While texts and icons are available in all the color variants, buttons use only 3 of them: primary, secondary and disabled",
+          "The colors can be used for the text, icons and buttons. They have 5 variants: black, white, primary, secondary, error, warning and disabled. While texts and icons are available in all the color variants, buttons use only 3 of them: primary, secondary and disabled",
         // content: {
         //   primary: "white",
         //   secondary: "black",

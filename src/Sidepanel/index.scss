@@ -1,12 +1,14 @@
+@import "../global/styles.scss";
+
 .Sidepanel {
   border-right: 1px solid rgb(231, 231, 231);
   width: 300px;
-}
 
-.SidepanelContent {
-  margin-inline: 2em;
-  position: sticky;
-  top: 0;
+  &__content {
+    margin-inline: 2em;
+    position: sticky;
+    top: 0;
+  }
 }
 
 .ComponentsList {
@@ -29,10 +31,11 @@
 }
 
 .ComponentLinkSelected {
-  background-color: rgb(151, 231, 229);
+  background-color: $primary;
   text-decoration: none;
 }
 
+// add class for the anchor or if not, move to global styles
 a:visited {
   color: unset;
 }

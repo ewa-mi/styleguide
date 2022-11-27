@@ -6,7 +6,7 @@ import ComponentsList from "./ComponentsList";
 export default () => {
   return (
     <div className="Sidepanel">
-      <div className="SidepanelContent">
+      <div className="Sidepanel__content">
         <ComponentsList />
       </div>
     </div>
