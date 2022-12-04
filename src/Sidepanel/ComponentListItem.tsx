@@ -1,12 +1,13 @@
-import "./index.scss";
-import { Component } from "../types";
+import "./ComponentListItem.scss";
+import { ComponentItem } from "../types";
 
 interface ComponentListItemProps {
-  item: Component;
+  item: ComponentItem;
   onChange: (element: string) => any;
   selected: string;
 }
-export default (props: ComponentListItemProps) => {
+
+const ComponentListItem = (props: ComponentListItemProps) => {
   const { item, onChange, selected } = props;
   const componentCategory =
     item.category.charAt(0).toUpperCase() + item.category.slice(1);
@@ -23,5 +24,7 @@ export default (props: ComponentListItemProps) => {
         {componentCategory}
       </a>
     </li>
-  ); // TODO: consider to make the font smaller
+  ); // TODO: consider smaller font size
 };
+
+export default ComponentListItem;

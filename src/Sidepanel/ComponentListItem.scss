@@ -1,0 +1,15 @@
+@import "../global/styles.scss";
+
+.ComponentListItem {
+  text-align: start;
+  margin: (0 0 8px 4px);
+}
+
+.ComponentLink {
+  text-decoration: none;
+}
+
+.ComponentLinkSelected {
+  background-color: $primary;
+  text-decoration: none;
+}

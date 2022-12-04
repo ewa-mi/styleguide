@@ -1,10 +1,10 @@
-import "./index.scss";
+import "./ComponentsList.scss";
 import { useState } from "react";
 import ComponentListItem from "./ComponentListItem";
 import ListTitle from "./ListTitle";
 import { components } from "../data/components";
 
-export default () => {
+const ComponentsList = () => {
   const [selected, setSelected] = useState("");
 
   const renderItems = components.map((item, index) => (
@@ -22,3 +22,5 @@ export default () => {
     </div>
   );
 };
+
+export default ComponentsList;

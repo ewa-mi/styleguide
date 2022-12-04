@@ -11,28 +11,9 @@
   }
 }
 
-.ComponentsList {
-  list-style: none;
-  padding: 0;
-}
-
-.ComponentListItem {
-  text-align: start;
-  margin: (0 0 8px 4px);
-}
-
 .ListTitle {
   width: 100%;
   display: flex;
-}
-
-.ComponentLink {
-  text-decoration: none;
-}
-
-.ComponentLinkSelected {
-  background-color: $primary;
-  text-decoration: none;
 }
 
 // add class for the anchor or if not, move to global styles

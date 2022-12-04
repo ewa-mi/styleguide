@@ -1,37 +1,20 @@
 import logo from "./logo.svg";
 import "./App.scss";
 import Sidepanel from "./Sidepanel";
-import { Component, Subcategory } from "./types";
 import { components } from "./data/components";
-import Color from "./components/Color";
+import Component from "./Component";
+import { ComponentItem } from "./types";
 
-const placeholder = (
-  <div style={{ border: "1px solid gray", height: "400px" }}>
-    COMPONENTS THEMSELVES WILL GO IN HERE
-  </div>
-);
-
-function App() {
-  const mappedComponents = components.map((item: Component, index) => {
-    const subItems = item.subcategories?.map((el: Subcategory, index) => {
-      return (
-        // TODO: Make a component from this:
-        <div key={index}>
-          <h4>{el.name}</h4>
-          <p>{el.intro}</p>
-          {/* THIS is themporary until the components registration is created */}
-          {item.category === "color" ? <Color /> : placeholder}
-        </div>
-      );
-    });
+const App = () => {
+  const mappedComponents = components.map((item: ComponentItem, index) => {
+    const { category, subcategories } = item;
 
     return (
-      <div key={index}>
-        <h1 id={item.category}>{item.category}</h1>
-        <div>{subItems}</div>
-        {/* This is temporary */}
-        {!item.subcategories?.length && placeholder}
-      </div>
+      <Component
+        key={index}
+        category={category}
+        subcategories={subcategories}
+      />
     );
   });
 
@@ -51,6 +34,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;
