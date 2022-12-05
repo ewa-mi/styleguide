@@ -1,6 +1,7 @@
 import { SubcomponentItem } from "./types";
 import Placeholder from "./Placeholder";
 import Subcomponent from "./Subcomponent";
+import { capitalizeFirstCharacter } from "./shared";
 
 interface Props {
   category: string;
@@ -19,9 +20,8 @@ const Component = (props: Props) => {
 
   return (
     <div>
-      <h1 id={category}>{category}</h1>
+      <h1 id={category}>{capitalizeFirstCharacter(category)} </h1>
       <div>{subItems}</div>
-      {/* This is temporary */}
       {!subcategories?.length && <Placeholder />}
     </div>
   );

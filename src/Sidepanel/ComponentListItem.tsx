@@ -1,5 +1,6 @@
 import "./ComponentListItem.scss";
 import { ComponentItem } from "../types";
+import { capitalizeFirstCharacter } from "../shared";
 
 interface ComponentListItemProps {
   item: ComponentItem;
@@ -9,8 +10,9 @@ interface ComponentListItemProps {
 
 const ComponentListItem = (props: ComponentListItemProps) => {
   const { item, onChange, selected } = props;
-  const componentCategory =
-    item.category.charAt(0).toUpperCase() + item.category.slice(1);
+  const { category } = item;
+
+  const componentCategory = capitalizeFirstCharacter(category);
   const isSelected = selected === componentCategory;
   const linkStyle = `ComponentLink ${isSelected && "ComponentLinkSelected"}`;
 
