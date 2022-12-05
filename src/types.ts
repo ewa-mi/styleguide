@@ -1,9 +1,9 @@
-export interface ComponentSubcategory {
+export interface SubcomponentItem {
   name: string | undefined;
   intro: string;
 }
 
 export type ComponentItem = {
   category: string;
-  subcategories: ComponentSubcategory[] | undefined; //TODO: Type this better
+  subcategories: SubcomponentItem[] | undefined; //TODO: Type this better
 };

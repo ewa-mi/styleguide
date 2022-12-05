@@ -1,10 +1,10 @@
-import { ComponentSubcategory } from "./types";
+import { SubcomponentItem } from "./types";
 import Placeholder from "./Placeholder";
 import Subcomponent from "./Subcomponent";
 
 interface Props {
   category: string;
-  subcategories: ComponentSubcategory[] | undefined;
+  subcategories: SubcomponentItem[] | undefined;
 }
 
 const Component = (props: Props) => {
