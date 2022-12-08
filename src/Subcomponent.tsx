@@ -15,10 +15,18 @@ const Subcomponent = (props: Props) => {
     <div>
       <h4>{name ? capitalizeFirstCharacter(name) : undefined}</h4>
       <p>{intro}</p>
-      {/* THIS is themporary until the components registration is created */}
-      {category === "color" ? <Color /> : <Placeholder />}
+      {renderComponent(name || category)}
     </div>
   );
 };
 
 export default Subcomponent;
+
+const renderComponent = (categoryName: string) => {
+  switch (categoryName) {
+    case "color":
+      return <Color />;
+    default:
+      return <Placeholder />;
+  }
+};
