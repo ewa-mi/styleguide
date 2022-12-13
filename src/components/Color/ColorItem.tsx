@@ -3,10 +3,11 @@ import "./ColorItem.scss";
 
 interface Props {
   label: string;
+  value: string;
 }
 
 export default (props: Props) => {
-  const { label } = props;
+  const { label, value } = props;
 
   const classes = classNames({
     ColorItem: true,
@@ -17,6 +18,7 @@ export default (props: Props) => {
     <div>
       <div className={classes}></div>
       <div className="ColorLabel">{label}</div>
+      <div className="ColorValue">{value}</div>
     </div>
   );
 };

@@ -1,3 +1,4 @@
+import "./Subcomponent.scss";
 import Color from "./components/Color";
 import Placeholder from "./Placeholder";
 import { capitalizeFirstCharacter } from "./shared";
@@ -12,9 +13,9 @@ const Subcomponent = (props: Props) => {
   const { name, intro, category } = props;
 
   return (
-    <div>
+    <div className="Subcomponent">
       <h4>{name ? capitalizeFirstCharacter(name) : undefined}</h4>
-      <p>{intro}</p>
+      <p className="Intro">{intro}</p>
       {renderComponent(name || category)}
     </div>
   );
