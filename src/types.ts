@@ -1,6 +1,7 @@
 export interface SubcomponentItem {
   name: string | undefined;
   intro: string;
+  content?: {};
 }
 
 export type ComponentItem = {

@@ -2,16 +2,21 @@ import classNames from "classnames";
 import "./ColorItem.scss";
 
 interface Props {
-  colorValue: string;
+  label: string;
 }
 
 export default (props: Props) => {
-  const { colorValue } = props;
+  const { label } = props;
 
   const classes = classNames({
     ColorItem: true,
-    [`ColorItem--bg-${colorValue}`]: true,
+    [`ColorItem--bg-${label}`]: true,
   });
 
-  return <div className={classes} />;
+  return (
+    <div>
+      <div className={classes}></div>
+      <div className="ColorLabel">{label}</div>
+    </div>
+  );
 };

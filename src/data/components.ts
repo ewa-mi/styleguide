@@ -9,13 +9,15 @@ export const components = [
         name: undefined,
         intro:
           "The colors can be used for the text, icons and buttons. They have 5 variants: black, white, primary, secondary, error, warning and disabled. While texts and icons are available in all the color variants, buttons use only 3 of them: primary, secondary and disabled",
-        // content: {
-        //   primary: "white",
-        //   secondary: "black",
-        //   error: "red",
-        //   warning: "orange",
-        //   disabled: "gray",
-        // },
+        content: {
+          black: "rgb(10, 10, 10)",
+          white: "rgb(250, 250, 250)",
+          primary: "rgb(23, 189, 164)",
+          secondary: "rgb(231, 94, 188)",
+          error: "rgb(230, 10, 10)",
+          warning: "rgb(255, 123, 0)",
+          disabled: "rgb(153, 153, 153)",
+        },
       },
     ],
   },

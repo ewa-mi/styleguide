@@ -1,22 +1,20 @@
 import ColorItem from "./ColorItem";
 import "./ColorList.scss";
+import { components } from "../../data/components";
+import { SubcomponentItem } from "../../types";
 
-const colorValues = [
-  "black",
-  "white",
-  "primary",
-  "secondary",
-  "error",
-  "warning",
-  "disabled",
-];
+const colorSubcategories = components.find((item) => item.category === "color")
+  ?.subcategories[0] as SubcomponentItem;
+
+const colors = colorSubcategories?.content;
 
 export default () => {
   return (
     <div className="ColorList">
-      {colorValues.map((item, index) => (
-        <ColorItem colorValue={item} key={index} />
-      ))}
+      {colors &&
+        Object.keys(colors).map((item, index) => (
+          <ColorItem label={item} key={index} />
+        ))}
     </div>
   );
 };
