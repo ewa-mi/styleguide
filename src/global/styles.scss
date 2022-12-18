@@ -5,7 +5,7 @@ $primary: rgb(23, 189, 164);
 $secondary: rgb(231, 94, 188);
 $error: rgb(230, 10, 10);
 $warning: rgb(255, 123, 0);
-$disabled: rgb(153, 153, 153);
+$disabled: rgb(197, 196, 196);
 
 $allBgColors: (
   "black": $black,
@@ -32,6 +32,46 @@ $allBgColors: (
   @each $name in map-keys($allBgColors) {
     &--bg-#{$name} {
       @include color-background($name);
+    }
+  }
+}
+
+@mixin color-border($name) {
+  @if map-has-key($allBgColors, $name) {
+    $colors: map-get(
+      $map: $allBgColors,
+      $key: $name,
+    );
+
+    border: 1px solid $colors;
+  }
+}
+
+@mixin color-text($name) {
+  @if map-has-key($allBgColors, $name) {
+    $colors: map-get(
+      $map: $allBgColors,
+      $key: $name,
+    );
+
+    color: $colors;
+  }
+}
+
+@mixin button-variant-color() {
+  @each $name in map-keys($allBgColors) {
+    &--text-#{$name} {
+      @include color-text($name);
+    }
+
+    &--contained-#{$name} {
+      @include color-background($name);
+      @include color-border($name);
+    }
+
+    &--outlined-#{$name} {
+      @include color-border($name);
+      @include color-text($name);
     }
   }
 }

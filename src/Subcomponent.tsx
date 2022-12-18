@@ -2,6 +2,7 @@ import "./Subcomponent.scss";
 import Color from "./components/Color";
 import Placeholder from "./Placeholder";
 import { capitalizeFirstCharacter } from "./shared";
+import RegularButtons from "./components/Button/RegularButtons";
 
 interface Props {
   name: string | undefined;
@@ -27,6 +28,10 @@ const renderComponent = (categoryName: string) => {
   switch (categoryName) {
     case "color":
       return <Color />;
+
+    case "regular button":
+      return <RegularButtons />;
+
     default:
       return <Placeholder />;
   }
