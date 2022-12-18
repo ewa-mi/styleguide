@@ -16,7 +16,7 @@ export const components = [
           secondary: "rgb(231, 94, 188)",
           error: "rgb(230, 10, 10)",
           warning: "rgb(255, 123, 0)",
-          disabled: "rgb(153, 153, 153)",
+          disabled: "rgb(168, 168, 168)",
         },
       },
     ],
