@@ -1,7 +1,7 @@
 @import "../../global/styles.scss";
 
 .Button {
-  @include button-variant-color();
+  @include button-variant-color(true);
   color: $white;
   border: 0;
   border-radius: 5px;

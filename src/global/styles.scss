@@ -17,7 +17,7 @@ $allBgColors: (
   "disabled": $disabled,
 );
 
-@mixin color-background($name) {
+@mixin color-background($name, $hasHover: false) {
   @if map-has-key($allBgColors, $name) {
     $colors: map-get(
       $map: $allBgColors,
@@ -25,6 +25,12 @@ $allBgColors: (
     );
 
     background-color: $colors;
+
+    @if $hasHover and $name != "disabled" {
+      &:hover {
+        background: darken($colors, 10%);
+      }
+    }
   }
 }
 
@@ -44,6 +50,12 @@ $allBgColors: (
     );
 
     border: 1px solid $colors;
+    @if $name != "disabled" {
+      &:hover {
+        border: 1px solid darken($colors, 10%);
+        cursor: pointer;
+      }
+    }
   }
 }
 
@@ -55,17 +67,27 @@ $allBgColors: (
     );
 
     color: $colors;
+    @if $name != "disabled" {
+      &:hover {
+        color: darken($colors, 10%);
+        cursor: pointer;
+      }
+    }
   }
 }
 
-@mixin button-variant-color() {
+@mixin button-variant-color($hasHover) {
+  &:hover {
+    transition: all 0.3s ease;
+  }
+
   @each $name in map-keys($allBgColors) {
     &--text-#{$name} {
       @include color-text($name);
     }
 
     &--contained-#{$name} {
-      @include color-background($name);
+      @include color-background($name, $hasHover);
       @include color-border($name);
     }
 
