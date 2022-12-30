@@ -18,3 +18,12 @@
 .Button--large {
   font-size: large;
 }
+
+.RegularButtonList {
+  display: flex;
+  justify-content: center;
+}
+
+.SmallRegularButtonList {
+  margin-right: 48px;
+}

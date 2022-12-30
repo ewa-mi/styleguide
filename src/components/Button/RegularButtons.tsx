@@ -1,11 +1,13 @@
-import Button from ".";
+import Button from "./index";
+import "./index.scss";
 
 const label = "click";
 
-export default () => {
+const RegularButtons = () => {
   return (
-    <div style={{ display: "flex", justifyContent: "center" }}>
-      <div style={{ marginRight: "48px" }}>
+    <div className="RegularButtonList">
+      {/* small */}
+      <div className="SmallRegularButtonList">
         <Button variant="text" color="primary" size="small" label={label} />
         <Button variant="outlined" color="primary" size="small" label={label} />
         <Button
@@ -85,3 +87,5 @@ export default () => {
     </div>
   );
 };
+
+export default RegularButtons;
