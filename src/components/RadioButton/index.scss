@@ -1,0 +1,19 @@
+@import "../../global/styles.scss";
+
+.RadioButton {
+  input {
+    appearance: none;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    border: 2px solid lighten($black, 50%);
+    transition: 0.2s all linear;
+    margin-right: 5px;
+    top: 4px;
+    cursor: pointer;
+  }
+
+  input:checked {
+    border: 6px solid $primary;
+  }
+}

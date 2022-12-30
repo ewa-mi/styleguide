@@ -27,12 +27,12 @@ export const components = [
       {
         name: "regular button",
         intro:
-          "The buttons are available in 3 variants (text, outlined and contained), 2 sizes (small and large) and 3 colors (primary, secondary and disabled)",
+          "The buttons are available in 3 variants (text, outlined and contained), 2 sizes (small and large) and 3 colors (primary, secondary and disabled). The disabled color is provided when the prop 'disabled' is passed to the component. Disabled button has no hover styling and is non-clickable.",
       },
       {
         name: "radio button",
         intro:
-          "The radio buttons are available in 3 colors (primary, secondary, disabled)",
+          "The radio buttons are available in 3 colors (primary, secondary, disabled). The disabled colr is provided when the prop 'disabled' is passed to the component. Disabled radio button is non-clickable.",
       },
     ],
   },

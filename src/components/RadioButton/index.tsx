@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./index.scss";
 
 interface RadioButtonProps {
   label: string;
@@ -16,15 +17,17 @@ const RadioButton = (props: RadioButtonProps) => {
   };
 
   return (
-    <div style={{ display: "flex" }}>
+    <div className="RadioButton">
       <input
+        id="radio-btn"
         type="radio"
         onChange={onChange}
         onClick={handleClick}
-        style={{ cursor: "pointer" }}
         checked={radioButtonClicked}
       />
-      <label style={{ marginLeft: "4px" }}>{label}</label>
+      <label htmlFor="radio-btn" style={{ marginLeft: "4px" }}>
+        {label}
+      </label>
     </div>
   );
 };

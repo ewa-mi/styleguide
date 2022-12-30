@@ -30,6 +30,9 @@ $allBgColors: (
       &:hover {
         background: darken($colors, 10%);
       }
+      &:active {
+        transform: scale(0.9);
+      }
     }
   }
 }
@@ -55,6 +58,9 @@ $allBgColors: (
         border: 1px solid darken($colors, 10%);
         cursor: pointer;
       }
+      &:active {
+        transform: scale(0.9);
+      }
     }
   }
 }
@@ -71,6 +77,9 @@ $allBgColors: (
       &:hover {
         color: darken($colors, 10%);
         cursor: pointer;
+      }
+      &:active {
+        transform: scale(0.9);
       }
     }
   }
