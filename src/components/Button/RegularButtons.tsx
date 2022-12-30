@@ -3,89 +3,33 @@ import "./index.scss";
 
 const label = "click";
 
+type ButtonSize = "small" | "large";
+
 const RegularButtons = () => {
   return (
     <div className="RegularButtonList">
-      {/* small */}
-      <div className="SmallRegularButtonList">
-        <Button variant="text" color="primary" size="small" label={label} />
-        <Button variant="outlined" color="primary" size="small" label={label} />
-        <Button
-          variant="contained"
-          color="primary"
-          size="small"
-          label={label}
-        />
-        <br />
-        <Button variant="text" color="secondary" size="small" label={label} />
-        <Button
-          variant="outlined"
-          color="secondary"
-          size="small"
-          label={label}
-        />
-        <Button
-          variant="contained"
-          color="secondary"
-          size="small"
-          label={label}
-        />
-        <br />
-        <Button variant="text" color="disabled" size="small" label={label} />
-        <Button
-          variant="outlined"
-          color="disabled"
-          size="small"
-          label={label}
-        />
-        <Button
-          variant="contained"
-          color="disabled"
-          size="small"
-          label={label}
-        />
-      </div>
-      {/* large */}
-      <div>
-        <Button variant="text" color="primary" size="large" label={label} />
-        <Button variant="outlined" color="primary" size="large" label={label} />
-        <Button
-          variant="contained"
-          color="primary"
-          size="large"
-          label={label}
-        />
-        <br />
-        <Button variant="text" color="secondary" size="large" label={label} />
-        <Button
-          variant="outlined"
-          color="secondary"
-          size="large"
-          label={label}
-        />
-        <Button
-          variant="contained"
-          color="secondary"
-          size="large"
-          label={label}
-        />
-        <br />
-        <Button variant="text" color="disabled" size="large" label={label} />
-        <Button
-          variant="outlined"
-          color="disabled"
-          size="large"
-          label={label}
-        />
-        <Button
-          variant="contained"
-          color="disabled"
-          size="large"
-          label={label}
-        />
-      </div>
+      <div className="SmallRegularButtonList">{renderButtonList("small")}</div>
+      <div>{renderButtonList("large")}</div>
     </div>
   );
 };
 
 export default RegularButtons;
+
+const renderButtonList = (size: ButtonSize) => {
+  return (
+    <>
+      <Button variant="text" color="primary" size={size} label={label} />
+      <Button variant="outlined" color="primary" size={size} label={label} />
+      <Button variant="contained" color="primary" size={size} label={label} />
+      <br />
+      <Button variant="text" color="secondary" size={size} label={label} />
+      <Button variant="outlined" color="secondary" size={size} label={label} />
+      <Button variant="contained" color="secondary" size={size} label={label} />
+      <br />
+      <Button variant="text" color="disabled" size={size} label={label} />
+      <Button variant="outlined" color="disabled" size={size} label={label} />
+      <Button variant="contained" color="disabled" size={size} label={label} />
+    </>
+  );
+};
