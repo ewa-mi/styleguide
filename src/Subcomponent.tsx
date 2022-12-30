@@ -2,7 +2,8 @@ import "./Subcomponent.scss";
 import Color from "./components/Color";
 import Placeholder from "./Placeholder";
 import { capitalizeFirstCharacter } from "./shared";
-import RegularButtons from "./components/Button/RegularButtons";
+import ButtonsList from "./components/Button/ButtonsList";
+import RadioButton from "./components/RadioButton";
 
 interface Props {
   name: string | undefined;
@@ -30,7 +31,15 @@ const renderComponent = (categoryName: string) => {
       return <Color />;
 
     case "regular button":
-      return <RegularButtons />;
+      return <ButtonsList />;
+
+    case "radio button":
+      return (
+        <RadioButton
+          label="Example"
+          onChange={() => console.log("Radio button selected")}
+        />
+      );
 
     default:
       return <Placeholder />;

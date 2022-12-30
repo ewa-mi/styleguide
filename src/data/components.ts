@@ -32,7 +32,7 @@ export const components = [
       {
         name: "radio button",
         intro:
-          "The radio buttons are available in 2 sizes (small and large) and 3 colors (primary, secondary, disabled)",
+          "The radio buttons are available in 3 colors (primary, secondary, disabled)",
       },
     ],
   },
