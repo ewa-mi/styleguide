@@ -38,6 +38,7 @@ const renderComponent = (categoryName: string) => {
         <RadioButton
           label="Example"
           onChange={() => console.log("Radio button selected")}
+          color="primary"
         />
       );
 

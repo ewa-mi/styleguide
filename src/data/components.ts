@@ -32,7 +32,7 @@ export const components = [
       {
         name: "radio button",
         intro:
-          "The radio buttons are available in 2 sizes (small and large) and 3 colors (primary, secondary, disabled). The disabled color is provided when the prop 'disabled' is passed to the component. Disabled radio button is non-clickable.",
+          "The radio buttons are available in 3 colors (primary, secondary, disabled). The disabled color is provided when the prop 'disabled' is passed to the component. Disabled radio button is non-clickable.",
       },
     ],
   },
