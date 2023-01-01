@@ -25,7 +25,7 @@ const RadioButton = (props: RadioButtonProps) => {
         onClick={handleClick}
         checked={radioButtonClicked}
       />
-      <label htmlFor="radio-btn" style={{ marginLeft: "4px" }}>
+      <label htmlFor="radio-btn" className="RadioButtonLabel">
         {label}
       </label>
     </div>
