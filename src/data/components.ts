@@ -42,7 +42,7 @@ export const components = [
       {
         name: "text field",
         intro:
-          "Simple text field with configurable width, an optional label and an optional error message",
+          "Simple text field with a configurable width, label and an optional placeholder and error message",
       },
       {
         name: "text area",

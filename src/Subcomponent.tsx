@@ -4,6 +4,7 @@ import Placeholder from "./Placeholder";
 import { capitalizeFirstCharacter } from "./shared";
 import ButtonsList from "./components/Button/ButtonsList";
 import RadioButtonsList from "./components/RadioButton/RadioButtonsList";
+import TextField from "./components/TextField";
 
 interface Props {
   name: string | undefined;
@@ -35,6 +36,15 @@ const renderComponent = (categoryName: string) => {
 
     case "radio button":
       return <RadioButtonsList />;
+
+    case "text field":
+      return (
+        <TextField
+          id="textFieldExample"
+          label="Very long label that should be truncated"
+          placeholder="Type something"
+        />
+      );
 
     default:
       return <Placeholder />;

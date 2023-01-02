@@ -30,6 +30,7 @@ const Button = (props: ButtonProps) => {
       disabled ? "disabled" : color || "primary"
     }`]: true,
     [`Button--${size}`]: true,
+    [`Button--animation`]: !disabled,
     [`${className}`]: true,
   });
 
