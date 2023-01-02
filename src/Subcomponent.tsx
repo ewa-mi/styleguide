@@ -3,7 +3,7 @@ import Color from "./components/Color";
 import Placeholder from "./Placeholder";
 import { capitalizeFirstCharacter } from "./shared";
 import ButtonsList from "./components/Button/ButtonsList";
-import RadioButton from "./components/RadioButton";
+import RadioButtonsList from "./components/RadioButton/RadioButtonsList";
 
 interface Props {
   name: string | undefined;
@@ -34,13 +34,7 @@ const renderComponent = (categoryName: string) => {
       return <ButtonsList />;
 
     case "radio button":
-      return (
-        <RadioButton
-          label="Example"
-          onChange={() => console.log("Radio button selected")}
-          color="primary"
-        />
-      );
+      return <RadioButtonsList />;
 
     default:
       return <Placeholder />;

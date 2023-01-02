@@ -7,10 +7,11 @@ interface RadioButtonProps {
   onChange: () => void;
   color?: string;
   disabled?: boolean;
+  className?: string;
 }
 
 const RadioButton = (props: RadioButtonProps) => {
-  const { label, onChange, color = "primary", disabled } = props;
+  const { label, onChange, color = "primary", disabled, className } = props;
 
   const [radioButtonClicked, setRadioButtonClicked] = useState(false);
 
@@ -26,8 +27,13 @@ const RadioButton = (props: RadioButtonProps) => {
     [`RadioButtonLabel--disabled`]: disabled,
   });
 
+  const radioButtonClasses = classNames({
+    RadioButton: true,
+    [`${className}`]: true,
+  });
+
   return (
-    <div className="RadioButton">
+    <div className={radioButtonClasses}>
       <input
         className={inputClasses}
         id="radio-btn"

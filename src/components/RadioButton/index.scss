@@ -8,7 +8,7 @@
     height: 16px;
     border: 2px solid $disabled;
     transition: 0.2s all linear;
-    margin-right: 5px;
+    margin-bottom: -2px;
     top: 4px;
     cursor: pointer;
 
@@ -29,8 +29,17 @@
 
 .RadioButtonLabel {
   margin-left: 4px;
+  font-size: large;
 
   &--disabled {
     color: $disabled;
   }
+}
+
+.RadioButtonsContainer {
+  text-align: center;
+}
+.RadioButtonsList {
+  display: inline-block;
+  text-align: left;
 }
