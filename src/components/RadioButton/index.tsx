@@ -6,18 +6,26 @@ import { ButtonColor } from "../sharedTypes";
 interface RadioButtonProps {
   id: string;
   label: string;
-  onChange: () => void;
+  onChange: () => void | undefined;
   color?: ButtonColor;
   disabled?: boolean;
   className?: string;
 }
 
 const RadioButton = (props: RadioButtonProps) => {
-  const { label, onChange, color = "primary", disabled, className, id } = props;
+  const {
+    label,
+    onChange,
+    color = "primary",
+    disabled = false,
+    className,
+    id,
+  } = props;
 
   const [radioButtonClicked, setRadioButtonClicked] = useState(false);
 
-  const handleClick = () => setRadioButtonClicked(!radioButtonClicked);
+  const handleClick = () =>
+    !disabled && setRadioButtonClicked(!radioButtonClicked);
 
   const inputClasses = classNames({
     RadioButton__input: true,
@@ -41,8 +49,8 @@ const RadioButton = (props: RadioButtonProps) => {
         className={inputClasses}
         id={id}
         type="radio"
-        onChange={onChange}
-        onClick={!disabled ? handleClick : undefined}
+        onChange={!disabled ? onChange : undefined}
+        onClick={handleClick}
         checked={radioButtonClicked}
       />
       <label htmlFor={id} className={labelClasses}>
