@@ -1,11 +1,12 @@
 import { useState } from "react";
 import classNames from "classnames";
 import "./index.scss";
+import { ButtonColor } from "../sharedTypes";
 
 interface RadioButtonProps {
   label: string;
   onChange: () => void;
-  color?: string;
+  color?: ButtonColor;
   disabled?: boolean;
   className?: string;
 }

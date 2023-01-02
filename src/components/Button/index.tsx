@@ -1,18 +1,28 @@
 import classNames from "classnames";
 import "./index.scss";
 import { ButtonSize } from "./types";
+import { ButtonColor } from "../sharedTypes";
 
 interface ButtonProps {
   variant?: "text" | "contained" | "outlined";
-  color?: "primary" | "secondary" | "disabled";
+  color?: ButtonColor;
   size: ButtonSize;
   label: string;
   onClick?: () => void;
   disabled?: boolean;
+  className?: string;
 }
 
 const Button = (props: ButtonProps) => {
-  const { variant, color, size, label, onClick, disabled = false } = props;
+  const {
+    variant,
+    color,
+    size,
+    label,
+    onClick,
+    disabled = false,
+    className,
+  } = props;
 
   const classes = classNames({
     Button: true,
@@ -20,6 +30,7 @@ const Button = (props: ButtonProps) => {
       disabled ? "disabled" : color || "primary"
     }`]: true,
     [`Button--${size}`]: true,
+    [`${className}`]: true,
   });
 
   return (
