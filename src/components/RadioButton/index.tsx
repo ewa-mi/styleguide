@@ -4,6 +4,7 @@ import "./index.scss";
 import { ButtonColor } from "../sharedTypes";
 
 interface RadioButtonProps {
+  id: string;
   label: string;
   onChange: () => void;
   color?: ButtonColor;
@@ -12,7 +13,7 @@ interface RadioButtonProps {
 }
 
 const RadioButton = (props: RadioButtonProps) => {
-  const { label, onChange, color = "primary", disabled, className } = props;
+  const { label, onChange, color = "primary", disabled, className, id } = props;
 
   const [radioButtonClicked, setRadioButtonClicked] = useState(false);
 
@@ -21,6 +22,7 @@ const RadioButton = (props: RadioButtonProps) => {
   const inputClasses = classNames({
     RadioButton__input: true,
     [`RadioButton__input--border-${color}`]: color,
+    [`RadioButton__input--disabled`]: disabled,
   });
 
   const labelClasses = classNames({
@@ -37,13 +39,13 @@ const RadioButton = (props: RadioButtonProps) => {
     <div className={radioButtonClasses}>
       <input
         className={inputClasses}
-        id="radio-btn"
+        id={id}
         type="radio"
         onChange={onChange}
         onClick={!disabled ? handleClick : undefined}
         checked={radioButtonClicked}
       />
-      <label htmlFor="radio-btn" className={labelClasses}>
+      <label htmlFor={id} className={labelClasses}>
         {label}
       </label>
     </div>

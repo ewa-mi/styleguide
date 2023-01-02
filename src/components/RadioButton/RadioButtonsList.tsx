@@ -8,15 +8,18 @@ const ButtonsList = () => {
     <div className="RadioButtonsContainer">
       <div className="RadioButtonsList">
         <RadioButton
+          id="primaryExample"
           label="The radio button with the primary color. Try it out!"
           onChange={handleChange}
         />
         <RadioButton
+          id="secondaryExample"
           label="This button has the secondary color. Select to see."
           onChange={handleChange}
           color="secondary"
         />
         <RadioButton
+          id="disabledExample"
           label="This one is disabled, try to select it."
           onChange={handleChange}
           disabled

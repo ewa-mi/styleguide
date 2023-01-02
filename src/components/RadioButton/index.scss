@@ -24,15 +24,21 @@
     &--border-secondary:checked {
       border-color: $secondary;
     }
+
+    &--disabled {
+      cursor: auto;
+    }
   }
 }
 
 .RadioButtonLabel {
   margin-left: 4px;
   font-size: large;
+  cursor: pointer;
 
   &--disabled {
     color: $disabled;
+    cursor: auto;
   }
 }
 
