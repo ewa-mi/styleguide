@@ -20,16 +20,22 @@ const TextField = (props: TextFieldProps) => {
     error,
   } = props;
 
+  const textFieldClasses = classNames({
+    TextField: true,
+    [`TextField--error`]: error,
+  });
+  console.log("ERR", error);
+
   return (
-    <form className="TextField" style={{ width: width }}>
+    <form className={textFieldClasses} style={{ width: width }}>
       <label htmlFor={id}>{label}</label>
       <input
         style={{ width: width }}
-        className="TextInput"
         id={id}
         type="text"
         placeholder={placeholder}
       />
+      {error && <div className="ErrorMessage">{errorMessage}</div>}
     </form>
   );
 };

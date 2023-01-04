@@ -15,8 +15,28 @@
     font-size: medium;
 
     &:focus-visible {
-      outline: none !important;
+      outline: none;
       border-color: $primary;
     }
   }
+
+  &--error {
+    label {
+      color: $error;
+    }
+
+    input {
+      border-color: $error;
+
+      &:focus-visible {
+        outline: none;
+        border-color: $error;
+      }
+    }
+  }
+}
+
+.ErrorMessage {
+  font-size: small;
+  color: $error;
 }

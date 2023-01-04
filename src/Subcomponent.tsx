@@ -39,11 +39,22 @@ const renderComponent = (categoryName: string) => {
 
     case "text field":
       return (
-        <TextField
-          id="textFieldExample"
-          label="Very long label that should be truncated"
-          placeholder="Type something"
-        />
+        <>
+          <TextField
+            id="textFieldExample"
+            label="This is a veeeeery long label that should be truncated"
+            placeholder="Type something"
+            width="300px"
+            error={true}
+            errorMessage="This is an example error message that appears under the text field."
+          />
+          <TextField
+            id="textFieldExample"
+            label="Label example"
+            placeholder="Type something"
+            width="500px"
+          />
+        </>
       );
 
     default:
