@@ -49,7 +49,7 @@ const RadioButton = (props: RadioButtonProps) => {
         className={inputClasses}
         id={id}
         type="radio"
-        onChange={!disabled ? onChange : undefined}
+        onChange={!disabled ? onChange : () => ""}
         onClick={handleClick}
         checked={radioButtonClicked}
       />

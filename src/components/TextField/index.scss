@@ -1,17 +1,22 @@
+@import "../../global/styles.scss";
+
 .TextField {
   label {
-    width: 300px; // TODO
     font-size: small;
     display: block;
   }
 
   input {
-    width: 300px; // TODO
     padding: 8px 8px;
     margin: 8px 0;
     box-sizing: border-box;
     border: 2px solid gray;
     border-radius: 4px;
     font-size: medium;
+
+    &:focus-visible {
+      outline: none !important;
+      border-color: $primary;
+    }
   }
 }

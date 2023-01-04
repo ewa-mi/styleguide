@@ -11,12 +11,20 @@ interface TextFieldProps {
 }
 
 const TextField = (props: TextFieldProps) => {
-  const { id, width, placeholder, label, errorMessage, error } = props;
+  const {
+    id,
+    width = "200px",
+    placeholder,
+    label,
+    errorMessage,
+    error,
+  } = props;
 
   return (
-    <form className="TextField">
+    <form className="TextField" style={{ width: width }}>
       <label htmlFor={id}>{label}</label>
       <input
+        style={{ width: width }}
         className="TextInput"
         id={id}
         type="text"
