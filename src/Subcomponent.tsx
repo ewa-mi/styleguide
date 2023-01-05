@@ -4,7 +4,7 @@ import Placeholder from "./Placeholder";
 import { capitalizeFirstCharacter } from "./shared";
 import ButtonsList from "./components/Button/ButtonsList";
 import RadioButtonsList from "./components/RadioButton/RadioButtonsList";
-import TextField from "./components/TextField";
+import TextFieldList from "./components/TextField/TextFieldList";
 
 interface Props {
   name: string | undefined;
@@ -38,24 +38,7 @@ const renderComponent = (categoryName: string) => {
       return <RadioButtonsList />;
 
     case "text field":
-      return (
-        <>
-          <TextField
-            id="textFieldExample"
-            label="This is a veeeeery long label that should be truncated"
-            placeholder="Type something"
-            width="300px"
-            error={true}
-            errorMessage="This is an example error message that appears under the text field."
-          />
-          <TextField
-            id="textFieldExample"
-            label="Label example"
-            placeholder="Type something"
-            width="500px"
-          />
-        </>
-      );
+      return <TextFieldList />;
 
     default:
       return <Placeholder />;

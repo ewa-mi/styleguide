@@ -1,8 +1,9 @@
 @import "../global/styles.scss";
 
 .Sidepanel {
+  flex: 0 0 300px;
+  box-sizing: border-box;
   border-right: 1px solid rgb(231, 231, 231);
-  width: 300px;
 
   &__content {
     margin-inline: 2em;

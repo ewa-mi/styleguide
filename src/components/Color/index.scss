@@ -4,7 +4,7 @@
   width: 100px;
   height: 100px;
   border-radius: 4px;
-  margin-inline: 16px;
+  margin: 16px;
   box-shadow: 0 2px 4px rgb(0 0 0 / 0.2);
 
   @include color-backgrounds();
@@ -20,4 +20,10 @@
   font-size: small;
   text-align: center;
   margin-top: 8px;
+}
+
+.ColorList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }

@@ -43,11 +43,12 @@
   font-size: large;
 }
 
-.ButtonsList {
+.ButtonsContainer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
-.SmallButtonsList {
-  margin-right: 48px;
+.ButtonsList {
+  margin: 16px;
 }

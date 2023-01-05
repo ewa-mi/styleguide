@@ -24,7 +24,6 @@ const TextField = (props: TextFieldProps) => {
     TextField: true,
     [`TextField--error`]: error,
   });
-  console.log("ERR", error);
 
   return (
     <form className={textFieldClasses} style={{ width: width }}>

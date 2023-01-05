@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import "./ColorItem.scss";
+import "./index.scss";
 
 interface Props {
   label: string;

@@ -7,9 +7,9 @@ const handleClick = () => console.log("Button clicked");
 
 const ButtonsList = () => {
   return (
-    <div className="ButtonsList">
-      <div className="SmallButtonsList">{renderButtonList("small")}</div>
-      <div>{renderButtonList("large")}</div>
+    <div className="ButtonsContainer">
+      <div className="ButtonsList">{renderButtonList("small")}</div>
+      <div className="ButtonsList">{renderButtonList("large")}</div>
     </div>
   );
 };

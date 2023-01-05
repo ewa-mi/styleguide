@@ -1,6 +1,8 @@
 @import "../../global/styles.scss";
 
 .TextField {
+  margin: 16px;
+
   label {
     font-size: small;
     display: block;
@@ -39,4 +41,10 @@
 .ErrorMessage {
   font-size: small;
   color: $error;
+}
+
+.TextFieldList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }

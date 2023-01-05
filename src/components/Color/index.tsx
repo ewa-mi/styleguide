@@ -1,5 +1,5 @@
 import ColorItem from "./ColorItem";
-import "./ColorList.scss";
+import "./index.scss";
 import { components } from "../../data/components";
 import { SubcomponentItem } from "../../types";
 
