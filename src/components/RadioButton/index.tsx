@@ -40,7 +40,7 @@ const RadioButton = (props: RadioButtonProps) => {
 
   const radioButtonClasses = classNames({
     RadioButton: true,
-    [`${className}`]: true,
+    [`${className}`]: className,
   });
 
   return (

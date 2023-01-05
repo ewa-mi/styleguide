@@ -31,7 +31,7 @@ const Button = (props: ButtonProps) => {
     }`]: true,
     [`Button--${size}`]: true,
     [`Button--animation`]: !disabled,
-    [`${className}`]: true,
+    [`${className}`]: className,
   });
 
   return (

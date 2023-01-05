@@ -1,15 +1,18 @@
 @import "../../global/styles.scss";
 
 .RadioButton {
+  display: flex;
+
   &__input {
     appearance: none;
     border-radius: 50%;
-    width: 16px;
+    flex: 0 0 16px;
     height: 16px;
     border: 2px solid $disabled;
     transition: 0.2s all linear;
     margin-bottom: -2px;
     top: 4px;
+
     cursor: pointer;
 
     &:checked {
@@ -43,9 +46,13 @@
 }
 
 .RadioButtonsContainer {
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
+
 .RadioButtonsList {
-  display: inline-block;
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 360px;
 }
