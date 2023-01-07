@@ -1,4 +1,4 @@
-// Colors
+// Styled components colors
 $black: rgb(10, 10, 10);
 $white: rgb(250, 250, 250);
 $primary: rgb(23, 189, 164);
@@ -6,6 +6,9 @@ $secondary: rgb(231, 94, 188);
 $error: rgb(230, 10, 10);
 $warning: rgb(255, 123, 0);
 $disabled: rgb(168, 168, 168);
+
+// Divider color is used on the page but is not one of the styled components colors
+$divider: rgb(231, 231, 231);
 
 $allBgColors: (
   "black": $black,

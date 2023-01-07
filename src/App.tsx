@@ -1,8 +1,8 @@
 import logo from "./logo.svg";
 import "./App.scss";
-import Sidepanel from "./Sidepanel";
+import Sidepanel from "./sidepanel";
 import { components } from "./data/components";
-import Component from "./Component";
+import Component from "./components/Component";
 import { ComponentItem } from "./types";
 
 const App = () => {
@@ -21,7 +21,8 @@ const App = () => {
   return (
     <div className="App">
       <div className="App-content">
-        {/* TODO: Raname sidepanel to sidebar and make in sticky on scroll https://dev.to/clairecodes/how-to-make-a-sticky-sidebar-with-two-lines-of-css-2ki7 */}
+        {/* TODO: Raname sidepanel to sidebar and maybe make in sticky on scroll 
+        https://dev.to/clairecodes/how-to-make-a-sticky-sidebar-with-two-lines-of-css-2ki7 */}
         <Sidepanel />
         <div className="Main">
           <div className="Head">

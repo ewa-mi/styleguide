@@ -11,7 +11,7 @@ const colorSubcategories = components.find((item) => item.category === "color")
 
 const colors = colorSubcategories?.content as ColorContent;
 
-export default () => {
+const ColorsList = () => {
   return (
     <div className="ColorList">
       {colors &&
@@ -21,3 +21,5 @@ export default () => {
     </div>
   );
 };
+
+export default ColorsList;

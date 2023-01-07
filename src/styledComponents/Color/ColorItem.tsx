@@ -6,7 +6,7 @@ interface Props {
   value: string;
 }
 
-export default (props: Props) => {
+const ColorItem = (props: Props) => {
   const { label, value } = props;
 
   const classes = classNames({
@@ -22,3 +22,5 @@ export default (props: Props) => {
     </div>
   );
 };
+
+export default ColorItem;

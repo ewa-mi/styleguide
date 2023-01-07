@@ -1,4 +1,4 @@
-import { SubcomponentItem } from "./types";
+import { SubcomponentItem } from "../types";
 import Placeholder from "./Placeholder";
 import Subcomponent from "./Subcomponent";
 import { capitalizeFirstCharacter } from "./shared";

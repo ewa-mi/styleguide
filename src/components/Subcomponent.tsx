@@ -1,10 +1,10 @@
 import "./Subcomponent.scss";
-import Color from "./components/Color";
-import Placeholder from "./Placeholder";
 import { capitalizeFirstCharacter } from "./shared";
-import ButtonsList from "./components/Button/ButtonsList";
-import RadioButtonsList from "./components/RadioButton/RadioButtonsList";
-import TextFieldList from "./components/TextField/TextFieldList";
+import Placeholder from "./Placeholder";
+import ColorsList from "../styledComponents/Color";
+import ButtonsList from "../styledComponents/Button/ButtonsList";
+import RadioButtonsList from "../styledComponents/RadioButton/RadioButtonsList";
+import TextFieldList from "../styledComponents/TextField/TextFieldList";
 
 interface Props {
   name: string | undefined;
@@ -29,7 +29,7 @@ export default Subcomponent;
 const renderComponent = (categoryName: string) => {
   switch (categoryName) {
     case "color":
-      return <Color />;
+      return <ColorsList />;
 
     case "regular button":
       return <ButtonsList />;

@@ -8,7 +8,7 @@ interface ListTitleProps {
   size: ListTitleSize | undefined;
 }
 
-export default (props: ListTitleProps) => {
+const ListTitle = (props: ListTitleProps) => {
   const { title, size } = props;
   if (!title) return null;
 
@@ -27,3 +27,5 @@ export default (props: ListTitleProps) => {
 
   return <div className="ListTitle">{getListTitle(size)}</div>;
 };
+
+export default ListTitle;

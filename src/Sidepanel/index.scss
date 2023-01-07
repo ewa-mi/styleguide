@@ -3,7 +3,7 @@
 .Sidepanel {
   flex: 0 0 300px;
   box-sizing: border-box;
-  border-right: 1px solid rgb(231, 231, 231);
+  border-right: 1px solid $divider;
 
   &__content {
     margin-inline: 2em;
@@ -17,7 +17,7 @@
   display: flex;
 }
 
-// add class for the anchor or if not, move to global styles
+// TODO: add class for the anchor or if not, move to global styles
 a:visited {
   color: unset;
 }

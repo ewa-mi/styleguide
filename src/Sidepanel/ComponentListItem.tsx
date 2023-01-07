@@ -1,6 +1,6 @@
 import "./ComponentListItem.scss";
 import { ComponentItem } from "../types";
-import { capitalizeFirstCharacter } from "../shared";
+import { capitalizeFirstCharacter } from "../components/shared";
 
 interface ComponentListItemProps {
   item: ComponentItem;

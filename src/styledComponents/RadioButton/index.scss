@@ -8,7 +8,7 @@
     border-radius: 50%;
     flex: 0 0 16px;
     height: 16px;
-    border: 2px solid $disabled;
+    border: 1.5px solid gray;
     transition: 0.2s all linear;
     margin-bottom: -2px;
     top: 4px;
@@ -30,6 +30,7 @@
 
     &--disabled {
       cursor: auto;
+      border-color: $disabled;
     }
   }
 }

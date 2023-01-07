@@ -1,9 +1,9 @@
 import "./index.scss";
 import ComponentsList from "./ComponentsList";
 
-// TODO: when panel becomes too small, it should turn into the hamburger menu, and then - appear as a sidepanel
+// TODO: when panel becomes too small, it should turn into the hamburger menu
 
-export default () => {
+const Sidepanel = () => {
   return (
     <div className="Sidepanel">
       <div className="Sidepanel__content">
@@ -12,3 +12,5 @@ export default () => {
     </div>
   );
 };
+
+export default Sidepanel;
