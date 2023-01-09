@@ -4,12 +4,12 @@
   border: 2px dashed $divider;
   height: 400px;
   position: relative;
-}
 
-.Text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -50px 0 0 -50px;
-  color: $disabled;
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0 0 -50px;
+    color: $disabled;
+  }
 }

@@ -1,7 +1,7 @@
 import "./Subcomponent.scss";
 import { capitalizeFirstCharacter } from "./shared";
 import Placeholder from "./Placeholder";
-import ColorsList from "../styledComponents/Color";
+import ColorList from "../styledComponents/Color/ColorList";
 import ButtonsList from "../styledComponents/Button/ButtonsList";
 import RadioButtonsList from "../styledComponents/RadioButton/RadioButtonsList";
 import TextFieldList from "../styledComponents/TextField/TextFieldList";
@@ -18,7 +18,7 @@ const Subcomponent = (props: Props) => {
   return (
     <div className="Subcomponent">
       <h4>{name ? capitalizeFirstCharacter(name) : undefined}</h4>
-      <p className="Intro">{intro}</p>
+      <p className="Subcomponent__intro">{intro}</p>
       {renderComponent(name || category)}
     </div>
   );
@@ -29,7 +29,7 @@ export default Subcomponent;
 const renderComponent = (categoryName: string) => {
   switch (categoryName) {
     case "color":
-      return <ColorsList />;
+      return <ColorList />;
 
     case "regular button":
       return <ButtonsList />;

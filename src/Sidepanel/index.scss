@@ -16,13 +16,3 @@
   width: 100%;
   display: flex;
 }
-
-// TODO: add class for the anchor or if not, move to global styles
-a:visited {
-  color: unset;
-}
-
-a:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}

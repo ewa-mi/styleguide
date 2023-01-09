@@ -46,14 +46,14 @@
   }
 }
 
-.RadioButtonsContainer {
+.RadioButtons {
   display: flex;
   justify-content: center;
-}
 
-.RadioButtonsList {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  max-width: 360px;
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 360px;
+  }
 }

@@ -2,7 +2,7 @@ import "./Placeholder.scss";
 
 const Placeholder = () => (
   <div className="Placeholder">
-    <div className="Text">Coming soon</div>
+    <div className="Placeholder__text">Coming soon</div>
   </div>
 );
 

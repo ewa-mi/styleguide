@@ -20,14 +20,13 @@ const App = () => {
 
   return (
     <div className="App">
-      <div className="App-content">
-        {/* TODO: Raname sidepanel to sidebar and maybe make in sticky on scroll 
-        https://dev.to/clairecodes/how-to-make-a-sticky-sidebar-with-two-lines-of-css-2ki7 */}
+      <div className="App__content">
+        {/* TODO: Raname sidepanel to sidebar? */}
         <Sidepanel />
-        <div className="Main">
-          <div className="Head">
+        <div className="App__main">
+          <div className="App__head">
             {/* consider removing this logo */}
-            <img src={logo} className="App-logo" alt="logo" />
+            <img src={logo} className="App__logo" alt="logo" />
             <h1>STYLE GUIDE</h1>
           </div>
           <div>{mappedComponents}</div>

@@ -27,14 +27,17 @@ const TextField = (props: TextFieldProps) => {
 
   return (
     <form className={textFieldClasses} style={{ width: width }}>
-      <label htmlFor={id}>{label}</label>
+      <label className="TextField__label" htmlFor={id}>
+        {label}
+      </label>
       <input
+        className="TextField__input"
         style={{ width: width }}
         id={id}
         type="text"
         placeholder={placeholder}
       />
-      {error && <div className="ErrorMessage">{errorMessage}</div>}
+      {error && <div className="TextField__errorMessage">{errorMessage}</div>}
     </form>
   );
 };

@@ -1,39 +1,39 @@
 .App {
   text-align: start;
+
+  &__content {
+    display: flex;
+    font-size: calc(5px + 2vmin);
+  }
+
+  &__main {
+    margin-inline: 100px;
+    margin-block: 20px;
+  }
+
+  &__head {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__logo {
+    height: 5vmin;
+    pointer-events: none;
+  }
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-.Head {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.Main {
-  margin-inline: 100px;
-  margin-block: 20px;
-}
-
-.App-logo {
-  height: 5vmin;
-  pointer-events: none;
-}
-
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .App__logo {
+    animation: App__logo-spin infinite 20s linear;
   }
 }
 
-.App-content {
-  display: flex;
-  font-size: calc(5px + 2vmin);
-}
-
-@keyframes App-logo-spin {
+@keyframes App__logo-spin {
   from {
     transform: rotate(0deg);
   }

@@ -5,8 +5,8 @@ const handleChange = () => console.log("Radio button selected");
 
 const ButtonsList = () => {
   return (
-    <div className="RadioButtonsContainer">
-      <div className="RadioButtonsList">
+    <div className="RadioButtons">
+      <div className="RadioButtons__list">
         <RadioButton
           id="primaryExample"
           label="The radio button with the primary color. Try it out!"

@@ -3,12 +3,12 @@
 .TextField {
   margin: 16px;
 
-  label {
+  &__label {
     font-size: small;
     display: block;
   }
 
-  input {
+  &__input {
     padding: 8px 8px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -23,11 +23,11 @@
   }
 
   &--error {
-    label {
+    .TextField__label {
       color: $error;
     }
 
-    input {
+    .TextField__input {
       border-color: $error;
 
       &:focus-visible {
@@ -36,11 +36,11 @@
       }
     }
   }
-}
 
-.ErrorMessage {
-  font-size: small;
-  color: $error;
+  &__errorMessage {
+    font-size: small;
+    color: $error;
+  }
 }
 
 .TextFieldList {

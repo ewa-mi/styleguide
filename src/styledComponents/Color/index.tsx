@@ -1,25 +1,26 @@
-import ColorItem from "./ColorItem";
+import classNames from "classnames";
 import "./index.scss";
-import { components } from "../../data/components";
-import { SubcomponentItem } from "../../types";
 
-type ColorContent = {
-  [key: string]: string;
-};
-const colorSubcategories = components.find((item) => item.category === "color")
-  ?.subcategories[0] as SubcomponentItem;
+interface Props {
+  label: string;
+  value: string;
+}
 
-const colors = colorSubcategories?.content as ColorContent;
+const Color = (props: Props) => {
+  const { label, value } = props;
 
-const ColorsList = () => {
+  const classes = classNames({
+    Color: true,
+    [`Color--bg-${label}`]: true,
+  });
+
   return (
-    <div className="ColorList">
-      {colors &&
-        Object.keys(colors).map((item, index) => (
-          <ColorItem label={item} key={index} value={colors[item]} />
-        ))}
+    <div>
+      <div className={classes}></div>
+      <div className="Color__label">{label}</div>
+      <div className="Color__value">{value}</div>
     </div>
   );
 };
 
-export default ColorsList;
+export default Color;

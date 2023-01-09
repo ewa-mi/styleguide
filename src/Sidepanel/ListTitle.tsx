@@ -1,4 +1,4 @@
-import "./index.scss";
+import "./ListTitle.scss";
 
 //TODO: consider to make more generic component from this, like Header.tsx or Title.tsx
 type ListTitleSize = "h1" | "h2" | "h3" | "h4";

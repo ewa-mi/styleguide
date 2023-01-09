@@ -14,7 +14,9 @@ const ComponentListItem = (props: ComponentListItemProps) => {
 
   const componentCategory = capitalizeFirstCharacter(category);
   const isSelected = selected === componentCategory;
-  const linkStyle = `ComponentLink ${isSelected && "ComponentLinkSelected"}`;
+  const linkStyle = `ComponentListItem__link ${
+    isSelected && "ComponentListItem__link--selected"
+  }`;
 
   return (
     <li className="ComponentListItem">
